@@ -15,7 +15,7 @@ PGB Example Core using the Cordova 'Statusbar' plugin
 
 ## Methods
 
-* StatusBar.overlaysWebView (can not be used with PhoneGap Build^^1^^)
+* StatusBar.overlaysWebView (can not be used with PhoneGap Build^1)
 * StatusBar.styleDefault
 * StatusBar.styleLightContent
 * StatusBar.styleBlackTranslucent
