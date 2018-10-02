@@ -101,7 +101,7 @@
             //
             statusbarPlugin.properties2HTML('statusbarStuff');
             //
-            window.setTimeout(statusbarPlugin.hide, 5000);
+            window.setTimeout(function() { statusbarPlugin.hide} , 5000);
         }
     }
     // The 'DOMContentLoaded' event fires before the 'deviceready'
