@@ -1,4 +1,5 @@
 body {margin:0px;font-size:large;}
+p {padding:0;}
 .hidden {visibility:collapse;display:none;}
 .expose {visibility:visible;display:block;} /* Here for completeness only. */
 .height100percent {height:100%} 
