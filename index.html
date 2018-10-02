@@ -29,7 +29,7 @@
         <button id=exitApp onclick='navigator.app.exitApp()' class="button button-pill button-primary button-large" style="margin:0.1em;float:right;">Exit</button>
     </div>
 
-    <button id=buttonHide class="button button-pill button-primary button-large" style="margin:0.1em;float:right;">buttonHide</button>
+    <button id=buttonHide class="button button-pill button-primary button-large" style="margin:0.1em;float:right;">Hide</button>
 
     <h3>App Version v<span id=appVersion></span></h3>
 
@@ -103,9 +103,12 @@
             //
             statusbarPlugin.properties2HTML('statusbarStuff');
             //
-            // window.setTimeout(function() { statusbarPlugin.hide} , 5000);
-            document.getElementById('buttonHide').addEventListener('touchend', statusbarPlugin.hide, false);
+            document.getElementById('buttonHide').addEventListener('touchend', hideIt, false);
         }
+    }
+    function hideIt () {
+        document.getElementById('status').innerHTML = statusbarPlugin.hide();
+        statusbarPlugin.properties2HTML('statusbarStuff');
     }
     // The 'DOMContentLoaded' event fires before the 'deviceready'
     document.addEventListener('DOMContentLoaded', onDOMContentLoaded, false);
