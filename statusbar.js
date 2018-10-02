@@ -10,4 +10,9 @@ var statusbarPlugin = {
         document.getElementById(outputElementId).innerHTML = statusbarStuff;
     },
     //
+    hide : function () {
+        StatusBar.hide();
+
+        return StatusBar.isVisible;
+    }
 }

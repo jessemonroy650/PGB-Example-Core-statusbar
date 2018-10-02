@@ -95,17 +95,13 @@
         document.getElementById('appVersion').innerHTML    = app.version;
 
         if (isCordovaApp(window.cordova)) {
-            if (StatusBar.isVisible) {
-                StatusBar.hide();
-            }
             document.getElementById('status').innerHTML  = JSON.stringify(StatusBar);
-            if (cordova.platformId == 'android') {
-                StatusBar.backgroundColorByHexString("#333");
-            }
             //
             devicePlugin.properties2HTML('deviceStuff');
             //
             statusbarPlugin.properties2HTML('statusbarStuff');
+            //
+            window.setTimeout(statusbarPlugin.hide, 5000);
         }
     }
     // The 'DOMContentLoaded' event fires before the 'deviceready'
