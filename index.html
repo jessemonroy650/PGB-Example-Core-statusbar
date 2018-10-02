@@ -95,6 +95,9 @@
         document.getElementById('appVersion').innerHTML    = app.version;
 
         if (isCordovaApp(window.cordova)) {
+            if (StatusBar.isVisible) {
+                StatusBar.hide();
+            }
             document.getElementById('status').innerHTML  = JSON.stringify(StatusBar);
             if (cordova.platformId == 'android') {
                 StatusBar.backgroundColorByHexString("#333");
