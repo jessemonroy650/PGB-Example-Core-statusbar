@@ -29,6 +29,8 @@
         <button id=exitApp onclick='navigator.app.exitApp()' class="button button-pill button-primary button-large" style="margin:0.1em;float:right;">Exit</button>
     </div>
 
+    <button id=buttonHide class="button button-pill button-primary button-large" style="margin:0.1em;float:right;">buttonHide</button>
+
     <h3>App Version v<span id=appVersion></span></h3>
 
     <div><b>Status:</b> <span id=status>status unknown</span><br></div>
@@ -101,7 +103,8 @@
             //
             statusbarPlugin.properties2HTML('statusbarStuff');
             //
-            window.setTimeout(function() { statusbarPlugin.hide} , 5000);
+            // window.setTimeout(function() { statusbarPlugin.hide} , 5000);
+            document.getElementById('buttonHide').addEventListener('touchend', statusbarPlugin.hide, false);
         }
     }
     // The 'DOMContentLoaded' event fires before the 'deviceready'
