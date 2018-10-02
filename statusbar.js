@@ -14,5 +14,11 @@ var statusbarPlugin = {
         StatusBar.hide();
 
         return StatusBar.isVisible;
+    },
+    //
+    show : function () {
+        StatusBar.show();
+
+        return StatusBar.isVisible;
     }
 }

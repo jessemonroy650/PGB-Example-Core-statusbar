@@ -103,12 +103,17 @@
             //
             statusbarPlugin.properties2HTML('statusbarStuff');
             //
-            document.getElementById('buttonHide').addEventListener('touchend', hideIt, false);
+            document.getElementById('buttonHide').addEventListener('touchend', toggleSB, false);
         }
     }
-    function hideIt () {
-        document.getElementById('status').innerHTML = statusbarPlugin.hide();
+    function toggleSB () {
+        if (StatusBar.isVisible) {
+            statusbarPlugin.hide();
+        } else {
+            statusbarPlugin.show();
+        }
         statusbarPlugin.properties2HTML('statusbarStuff');
+        document.getElementById('status').innerHTML = JSON.stringify(StatusBar);
     }
     // The 'DOMContentLoaded' event fires before the 'deviceready'
     document.addEventListener('DOMContentLoaded', onDOMContentLoaded, false);
