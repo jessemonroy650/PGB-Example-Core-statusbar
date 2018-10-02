@@ -33,9 +33,8 @@
 
     <div><b>Status:</b> <span id=status>status unknown</span><br></div>
 
-<!--    <b>navigator.appCodeName:</b> <span id=navCodeName>false</span><br>
+    <b>navigator.appCodeName:</b> <span id=navCodeName>false</span><br>
     <b>navigator.appName:</b> <span id=navName>false</span><br>
--->
     <b>navigator.appVersion:</b> <span id=navVersion>false</span><br>
     <b>navigator.platform:</b>  <span id=navPlatform>false</span><br>
     <b>isCordovaApp:</b> <span id=isCordovaApp>false</span><br>
@@ -96,6 +95,11 @@
         document.getElementById('appVersion').innerHTML    = app.version;
 
         if (isCordovaApp(window.cordova)) {
+            document.getElementById('status').innerHTML  = StatusBar
+            if (cordova.platformId == 'android') {
+                StatusBar.backgroundColorByHexString("#333");
+            }
+            //
             devicePlugin.properties2HTML('deviceStuff');
             //
             statusbarPlugin.properties2HTML('statusbarStuff');
