@@ -1,12 +1,13 @@
 # PGB-Example-Core-Statusbar
-PGB Example Core using the Cordova 'Statusbar' plugin
+PGB Example Core using the Cordova 'Statusbar' plugin using cli-6.0.0
 
 This example app hides the statusbar after the button labeled 'Hide' is clicked.
 
 > The status bar is the little horizontal bar at the top of an iDevice that displays network connectivity, time, battery and so on. By default a Sencha Touch application packaged with PhoneGap Build will just inherit the native behaviour of the iOS status bar.Apr 4, 2017
 https://www.joshmorony.com/take-complete-control-of-the-ios-status-bar-with-phonegap-build/
 
-* Statusbar - https://www.npmjs.com/package/cordova-plugin-statusbar
+* https://www.npmjs.com/package/cordova-plugin-device
+* https://www.npmjs.com/package/cordova-plugin-statusbar
 
 ## Preferences
 
@@ -38,8 +39,3 @@ https://www.joshmorony.com/take-complete-control-of-the-ios-status-bar-with-phon
 ## Events
 
 * statusTap
-
-
-
-
-
